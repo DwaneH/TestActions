@@ -1,0 +1,18 @@
+name: Hello Workflow
+
+on:
+  push: {}
+
+jobs:
+  hello-bye:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run hello
+        run: echo "Hello from GitHub Actions!"
+      - name: Check files
+        run: |
+          pwd
+          ls -a
+      - name: Run bye
+        run: echo "Bye from GitHub Actions!"
